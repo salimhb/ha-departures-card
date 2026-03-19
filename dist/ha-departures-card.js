@@ -801,7 +801,7 @@ function t(t,e,n,i){var a,o=arguments.length,r=o<3?e:null===i?i=Object.getOwnPro
         style=${lo(i)}>
         ${n}
       </div>
-    `}_renderTimes(t,e){let n=t.slice(0,this.cardConfig.departuresToShow);return X`<div class="table-times">${n.map((t=>this._renderTime(t,e)))}</div>`}_renderTime(t,e){let n=X``,i="";const a=e??Ua,o=t.isArriving(this.cardConfig.arrivalTimeOffset);let r={timestamp:t.timeDiff>60,arriving:o,delayed:t.isDelayed,earlier:t.isEarlier};return t.isDelayed?i=`+${t.delay}`:t.isEarlier&&(i=`${t.delay}`),n=0==t.timeDiff?X`<ha-icon icon=${a}></ha-icon>`:t.timeDiff>60?X`${Po(t.time,"HH:mm")}`:X`${t.timeDiff} min`,X`<div class="table-time ${ro(r)}" data-trip-id="${t.tripId}">
+    `}_renderTimes(t,e){let n=t.slice(0,this.cardConfig.departuresToShow);return X`<div class="table-times">${n.map((t=>this._renderTime(t,e)))}</div>`}_renderTime(t,e){let n=X``,i="";const a=e??Ua,o=t.isArriving(this.cardConfig.arrivalTimeOffset);let r={timestamp:t.timeDiff>60,arriving:o,delayed:t.isDelayed,earlier:t.isEarlier};return t.isDelayed?i=`+${t.delay}`:t.isEarlier&&(i=`${t.delay}`),n=0==t.timeDiff?X`<ha-icon icon=${a}></ha-icon>`:(t.timeDiff,X`${Po(t.time,"HH:mm")}`),X`<div class="table-time ${ro(r)}" data-trip-id="${t.tripId}">
       <div class="table-time-diff">${n}</div>
       ${o||!t.delay?q:X`<div class="table-time-delay">${i}</div>`}
     </div>`}};function _r(t,e){for(var n=0;n<e.length;n++){var i=e[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(t,i.key,i)}}vr.styles=[cr.styles,s`
